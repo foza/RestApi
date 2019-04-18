@@ -10,8 +10,7 @@ exports.detail = (req , res) =>{
 
 exports.courierDetail = (req , res) => {
     const id =req.params.id;
-    console.log(id);
-    CourierHistory.findAll({
+    CourierHistory.findAll({attributes: ['created_at','type_r','amount','type']},{
         where: {user_id: id}
         }).then(couriersHistory =>{
         res.send(couriersHistory);
