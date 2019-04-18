@@ -1,8 +1,8 @@
 module.exports = (sequelize, Sequelize) => {
     const CourierHistory = sequelize.define(
-        'billinghistory',{
-            order_id:{
-              type: Sequelize.STRING
+        'billinghistory', {
+            order_id: {
+                type: Sequelize.STRING
             },
             user_id: {
                 type: Sequelize.INTEGER
@@ -11,7 +11,7 @@ module.exports = (sequelize, Sequelize) => {
                 type: Sequelize.STRING
             },
             type: {
-              type: Sequelize.INTEGER
+                type: Sequelize.INTEGER
             },
             created_at: {
                 type: Sequelize.STRING
@@ -22,7 +22,7 @@ module.exports = (sequelize, Sequelize) => {
             amount: {
                 type: Sequelize.STRING
             }
-        },{
+        }, {
             timestamps: false,
             freezeTableName: true,
         });

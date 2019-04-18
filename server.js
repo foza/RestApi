@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.json())
- 
+
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET, PUT, PATCH, POST, DELETE");
@@ -10,16 +10,16 @@ app.use(function (req, res, next) {
     next();
 });
 require(
-  './app/routes/courier.routes.js',
-  './app/routes/courierHistory.routes.js'
+    './app/routes/courier.routes.js',
+    './app/routes/courierHistory.routes.js'
 )(app);
- 
+
 // Create a Server
 var server = app.listen(3001, function () {
- 
-  var host = server.address().address
-  var port = server.address().port
- 
-  console.log("App listening at http://%s:%s", host, port)
- 
+
+    var host = server.address().address
+    var port = server.address().port
+
+    console.log("App listening at http://%s:%s", host, port)
+
 })
