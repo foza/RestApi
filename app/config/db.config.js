@@ -20,7 +20,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 //Models/tables
-db.couriers = require('../model/couriers.model.js')(sequelize, Sequelize);
-db.UserDetail = require('../model/courierHistory.model.js')(sequelize, Sequelize);
+db.UserDetail = require('../model/history.model.js')(sequelize, Sequelize);
+db.Users = require('../model/users.model.js')(sequelize, Sequelize);
 
 module.exports = db;

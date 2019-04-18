@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-    const CourierHistory = sequelize.define(
+    const History = sequelize.define(
         'billinghistory', {
             user_id: {
                 type: Sequelize.INTEGER
@@ -11,10 +11,10 @@ module.exports = (sequelize, Sequelize) => {
                 type: Sequelize.INTEGER
             },
             created_at: {
-                type: Sequelize.STRING
+                type: Sequelize.DATE
             },
             updated_at: {
-                type: Sequelize.STRING
+                type: Sequelize.DATE
             },
             amount: {
                 type: Sequelize.STRING
@@ -40,5 +40,5 @@ module.exports = (sequelize, Sequelize) => {
             freezeTableName: true,
         });
 
-    return CourierHistory;
+    return History;
 }

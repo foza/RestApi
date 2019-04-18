@@ -1,15 +1,13 @@
 module.exports = function (app) {
 
-    var courier = require('../controllers/courier.controller.js');
-    var courierHistory = require('../controllers/courierHistory.controller.js');
+    var users = require('../controllers/users.controller.js');
+    var courierHistory = require('../controllers/front.controller.js');
+    var api = require('../controllers/api.controller.js');
 
     /***API***/
-    app.post('/api/courier', courier.create);
-    app.get('/api/courier', courier.findAll);
-    app.put('/api/courier/:id', courier.update);
-    app.delete('/api/courier/:id', courier.delete);
+    app.post('/api/v1/bonus/create', api.create);
 
     /**апи для биллинга фронт **/
-    app.get('/list', courier.list);
+    app.get('/list', users.list);
     app.get('/courierDetail/:id', courierHistory.userDetail);
 }
