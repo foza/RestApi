@@ -9,10 +9,7 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "Content-Type");
     next();
 });
-require(
-    './app/routes/courier.routes.js',
-    './app/routes/courierHistory.routes.js'
-)(app);
+require('./app/routes/app.routes.js')(app);
 
 // Create a Server
 var server = app.listen(3001, function () {
