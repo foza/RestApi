@@ -18,7 +18,6 @@ exports.create = (req, res) => {
 // FETCH all
 exports.findAll = (req, res) => {
     Courier.findAll().then(couriers => {
-
         res.send(couriers);
     });
 };

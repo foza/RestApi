@@ -1,22 +1,15 @@
-module.exports = function(app) {
- 
-    var courier = require('../controllers/courier.controller.js');
- 
-    // Create a new courier
-    app.post('/api/courier', courier.create);
- 
-    // Retrieve all courier
-    app.get('/api/courier', courier.findAll);
+module.exports = function (app) {
 
-    app.get('/list', courier.list);
-  
-    // Update a courier with Id
+    var courier = require('../controllers/courier.controller.js');
+    var courierHistory = require('../controllers/courierHistory.controller.js');
+
+    /***API***/
+    app.post('/api/courier', courier.create);
+    app.get('/api/courier', courier.findAll);
     app.put('/api/courier/:id', courier.update);
- 
-    // Delete a courier with Id
     app.delete('/api/courier/:id', courier.delete);
 
-    var courierHistory = require('../controllers/courierHistory.controller.js');
-    
+    /**апи для биллинга фронт **/
+    app.get('/list', courier.list);
     app.get('/courierDetail/:id', courierHistory.userDetail);
 }

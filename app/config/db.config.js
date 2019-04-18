@@ -21,6 +21,6 @@ db.sequelize = sequelize;
 
 //Models/tables
 db.couriers = require('../model/couriers.model.js')(sequelize, Sequelize);
-db.couriersHistory = require('../model/courierHistory.model.js')(sequelize, Sequelize);
+db.UserDetail = require('../model/courierHistory.model.js')(sequelize, Sequelize);
 
 module.exports = db;
