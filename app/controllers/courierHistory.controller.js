@@ -8,7 +8,7 @@ exports.detail = (req , res) =>{
     })
 };
 
-exports.courierDetail = (req , res) => {
+exports.userDetail = (req , res) => {
     const id =req.params.id;
     CourierHistory.findAll({attributes: ['created_at','type_r','amount','type']},{
         where: {user_id: id}

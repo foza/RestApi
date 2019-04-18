@@ -18,5 +18,5 @@ module.exports = function(app) {
 
     var courierHistory = require('../controllers/courierHistory.controller.js');
     
-    app.get('/courierDetail/:id', courierHistory.courierDetail);
+    app.get('/courierDetail/:id', courierHistory.userDetail);
 }
