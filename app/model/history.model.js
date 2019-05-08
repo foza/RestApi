@@ -2,13 +2,16 @@ module.exports = (sequelize, Sequelize) => {
     const History = sequelize.define(
         'billinghistory', {
             user_id: {
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
+                allowNull: false,
             },
             phone: {
-                type: Sequelize.STRING
+                type: Sequelize.STRING,
+                allowNull: false,
             },
             type: {
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
+                allowNull: false,
             },
             created_at: {
                 type: Sequelize.DATE
@@ -17,22 +20,26 @@ module.exports = (sequelize, Sequelize) => {
                 type: Sequelize.DATE
             },
             amount: {
-                type: Sequelize.STRING
+                type: Sequelize.STRING,
+                allowNull: false,
             },
             balance: {
                 type: Sequelize.STRING
             },
             type_r: {
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
+                allowNull: false,
             },
             email: {
                 type: Sequelize.STRING
             },
             order_id: {
-                type: Sequelize.STRING
+                type: Sequelize.STRING,
+                allowNull: false,
             },
             user_type: {
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
+                allowNull: false,
             }
 
         }, {

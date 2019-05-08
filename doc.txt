@@ -6,12 +6,13 @@ type_r da kelayotgan summani turi kursatiladi bular :
 2 -- Сертификат (Klient uzini puliga sertifikat sotib olgan bo'lsa)
 3 -- Бесплатная доставка ( Agar dostavka tekin tushgan bo'lsa kuryeyga)
 4 -- Бонус За доставку ( kuryerlarni zakrit qilgan zakazidan tushgan bonusi )
+5 -- Заказдан келган бонус (факат оддий юзерларга)
 
 **type**
 
-1 --- риход (bonus yoki pulni prixodi)
+1 --- приход (bonus yoki pulni prixodi)
 2 --- расход
-3 --- Отмена заказа (agar )
+3 --- Отмена заказа (agar а )
 
 **user_type**
 
@@ -19,13 +20,16 @@ type_r da kelayotgan summani turi kursatiladi bular :
 2 -- курьер     (курьерга аппдан тушган пуллар)
 3 -- ресторан
 
+
+/api/v1/bonus/userBonusSolary/
+id = 14 (user_id)
+
 `/api/v1/bonus/create`
 
 `"user_id":"9999хххххх",
  	"type_r":"2",
  	"type": 1,
  	"amount":1000,
- 	"email": "webfoza@gmail.com",
  	"order_id": "123131",
  	"user_type": 2
  	`
