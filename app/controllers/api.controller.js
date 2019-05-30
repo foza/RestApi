@@ -3,11 +3,11 @@ const UserDetail = db.UserDetail;
 const sequelize = require('sequelize');
 exports.create = (req, res) => {
     const userId = req.body.user_id,
-            typeR = req.body.type_r,
-            type = req.body.type,
-            amount = req.body.amount,
-            order_id = req.body.order_id,
-            user_type = req.body.user_type;
+        typeR = req.body.type_r,
+        type = req.body.type,
+        amount = req.body.amount,
+        order_id = req.body.order_id,
+        user_type = req.body.user_type;
 
     UserDetail.create(
         {
@@ -23,7 +23,7 @@ exports.create = (req, res) => {
 };
 
 exports.bonusList = (req, res) => {
-    UserDetail.findAll( {
+    UserDetail.findAll({
         attributes: [
             'id',
             'user_id',
@@ -53,7 +53,7 @@ exports.userBonus = (req, res) => {
                 'user_id',
                 'order_id'
             ],
-           where: {
+            where: {
                 user_id: id,
                 user_type: 2
             }

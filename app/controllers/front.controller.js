@@ -13,7 +13,6 @@ exports.userDetail = (req, res) => {
         },
         {
             where: {user_id: id}
-
         }).then(userDetail => {
         res.send(userDetail);
     })
