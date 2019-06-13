@@ -1,7 +1,7 @@
 const env = {
     database: 'billing',
-    username: 'dev3',
-    password: 'YLUcsmx753qhPccs',
+    username: 'root',
+    password: '',
     host: 'localhost',
     dialect: 'mysql',
     define: {

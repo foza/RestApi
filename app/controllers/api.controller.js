@@ -16,7 +16,8 @@ exports.create = (req, res) => {
             type: type,
             amount: amount,
             order_id: order_id,
-            user_type: user_type
+            user_type: user_type,
+            created_at: new Date(),
         }).then(userDetail => {
         res.send(userDetail);
     })
